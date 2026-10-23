@@ -2306,6 +2306,28 @@
 </td></tr>
 </table>
 
+---
+
+## Xiaomi Redmi K60
+
+**State:** Active <br>
+**Codename:** mondrian <br>
+**Models:** 1
+
+### UEFI Status
+
+| Feature            | Description | State |
+|:-------------------|:------------|:-----:|
+| Display            |             | ❌    |
+| Internal Storage   |             | ❌    |
+| Side Buttons       |             | ❌    |
+| USB Host Mode      |             | ❌    |
+| USB Device Mode    |             | ❌    |
+| USB Power Delivery |             | ❌    |
+| Mass Storage       |             | ❌    |
+| Windows Boot       |             | ❌    |
+| Linux Boot         |             | ❌    |
+
 </details>
 
 ---

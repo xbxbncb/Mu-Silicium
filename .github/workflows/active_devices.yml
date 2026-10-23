@@ -8,6 +8,7 @@ on:
       - 'Mu_Basecore'
       - 'MuPatches/**'
       - 'Platforms/**'
+      - 'Resources/**'
       - 'Silicon/**'
       - 'Silicium-ACPI'
   workflow_dispatch:
@@ -19,6 +20,7 @@ on:
       - 'Mu_Basecore'
       - 'MuPatches/**'
       - 'Platforms/**'
+      - 'Resources/**'
       - 'Silicon/**'
       - 'Silicium-ACPI'
 env:
@@ -29,7 +31,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Build UEFI for active devices
-        run: bash ./setup_env.sh -p apt && bash ./build_active_devices.sh -r DEBUG
+        run: bash ./setup_env.sh -p apt && ./build_uefi.py -d mondrian -r DEBUG -c
 
       - name: Upload UEFI images
         uses: actions/upload-artifact@v7
