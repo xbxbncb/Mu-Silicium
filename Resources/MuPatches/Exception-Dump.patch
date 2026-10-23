@@ -1,0 +1,25 @@
+--- a/UefiCpuPkg/Library/CpuExceptionHandlerLib/AArch64/CpuExceptionHandlerLib.c
++++ b/UefiCpuPkg/Library/CpuExceptionHandlerLib/AArch64/CpuExceptionHandlerLib.c
+@@ -331,8 +331,22 @@
+       ));
+   } else {
+     DEBUG ((DEBUG_ERROR, "PC 0x%012lx\n", SystemContext.SystemContextAArch64->ELR));
+   }
++
++  // Rebuild the ConOut summary so that PC/module/FAR/ESR are printed LAST
++  // (after the stack dump, right before ASSERT) and survive console scrolling.
++  AsciiSPrint (
++    Buffer,
++    sizeof (Buffer),
++    "\n%a Exception at 0x%016lx [%a] FAR 0x%016lx ESR 0x%08x\n",
++    mExceptionTypeString[ExceptionType],
++    SystemContext.SystemContextAArch64->ELR,
++    (Pdb != NULL) ? BaseName (Pdb) : "-",
++    SystemContext.SystemContextAArch64->FAR,
++    (UINT32)SystemContext.SystemContextAArch64->ESR
++    );
++  UnicodeSPrintAsciiFormat (UnicodeBuffer, MAX_PRINT_CHARS, Buffer);
+ 
+   if ((UINT64 *)SystemContext.SystemContextAArch64->FP != 0) {
+     Idx = 0;
+ 
