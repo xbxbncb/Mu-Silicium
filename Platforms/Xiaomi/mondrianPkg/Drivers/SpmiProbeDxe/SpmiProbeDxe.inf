@@ -1,0 +1,20 @@
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = SpmiProbeDxe
+  FILE_GUID                      = FBF8DF6A-A5B9-40BD-9F4C-FA37D4E24BBB
+  MODULE_TYPE                    = DXE_DRIVER
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = SpmiProbeDxeEntryPoint
+
+[Sources]
+  SpmiProbeDxe.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  DebugLib
+  UefiDriverEntryPoint
+
+[Depex]
+  TRUE

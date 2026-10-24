@@ -34,7 +34,8 @@ APRIORI DXE {
   INF mondrianPkg/Binaries/QcomPkg/Drivers/TzDxe/ScmDxeLA.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/TLMMDxe/TLMMDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/I2CDxe/I2CDxe.inf
-  # EXCLUDED: INF mondrianPkg/Binaries/QcomPkg/Drivers/SPMIDxe/SPMIDxe.inf
+  INF mondrianPkg/Drivers/SpmiProbeDxe/SpmiProbeDxe.inf
+  INF mondrianPkg/Binaries/QcomPkg/Drivers/SPMIDxe/SPMIDxe.inf
 
   INF MdeModulePkg/Universal/ResetSystemRuntimeDxe/ResetSystemRuntimeDxe.inf
 
