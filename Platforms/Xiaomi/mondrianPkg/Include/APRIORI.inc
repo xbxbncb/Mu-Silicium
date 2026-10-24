@@ -45,7 +45,7 @@ APRIORI DXE {
   INF MdeModulePkg/Universal/Disk/UnicodeCollation/EnglishDxe/EnglishDxe.inf
 
   INF mondrianPkg/Binaries/QcomPkg/Drivers/SdccDxe/SdccDxe.inf
-  INF mondrianPkg/Binaries/QcomPkg/Drivers/UFSDxe/UFSDxe.inf
+  # EXCLUDED: INF mondrianPkg/Binaries/QcomPkg/Drivers/UFSDxe/UFSDxe.inf
 
   INF FatPkg/EnhancedFatDxe/Fat.inf
 

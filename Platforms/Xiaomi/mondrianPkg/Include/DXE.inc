@@ -42,7 +42,7 @@
   INF FatPkg/EnhancedFatDxe/Fat.inf
   INF MdeModulePkg/Universal/Disk/UnicodeCollation/EnglishDxe/EnglishDxe.inf
 
-  INF mondrianPkg/Binaries/QcomPkg/Drivers/UFSDxe/UFSDxe.inf
+  # EXCLUDED: INF mondrianPkg/Binaries/QcomPkg/Drivers/UFSDxe/UFSDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/CmdDbDxe/CmdDbDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/PwrUtilsDxe/PwrUtilsDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/RpmhDxe/RpmhDxe.inf
