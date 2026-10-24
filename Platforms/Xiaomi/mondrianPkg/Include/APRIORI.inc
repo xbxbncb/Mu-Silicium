@@ -49,7 +49,7 @@ APRIORI DXE {
 
   INF FatPkg/EnhancedFatDxe/Fat.inf
 
-  INF mondrianPkg/Binaries/QcomPkg/Drivers/TzDxe/TzDxeLA.inf
+  # EXCLUDED: INF mondrianPkg/Binaries/QcomPkg/Drivers/TzDxe/TzDxeLA.inf
 
   INF MdeModulePkg/Universal/Variable/RuntimeDxe/VariableRuntimeDxe.inf
 

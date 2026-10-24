@@ -11,7 +11,7 @@
 
   INF mondrianPkg/Binaries/QcomPkg/Drivers/ShmBridgeDxe/ShmBridgeDxeLA.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/TzDxe/ScmDxeLA.inf
-  INF mondrianPkg/Binaries/QcomPkg/Drivers/TzDxe/TzDxeLA.inf
+  # EXCLUDED: INF mondrianPkg/Binaries/QcomPkg/Drivers/TzDxe/TzDxeLA.inf
 
   INF MdeModulePkg/Universal/WatchdogTimerDxe/WatchdogTimer.inf
   INF MdeModulePkg/Universal/CapsuleRuntimeDxe/CapsuleRuntimeDxe.inf
