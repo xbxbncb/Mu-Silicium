@@ -153,7 +153,10 @@ PlatformBootManagerPriorityBoot (IN OUT UINT16 **BootNext)
   UnregisterKeyCallback ();
 
   // Get Boot Manager Flag
-  BootManagerFlag = EnterBootManager ();
+  // TODO(phase2): restore EnterBootManager() once SPMI/PMIC key input works.
+  // Mondrian volume keys live on PMIC (GPIO6 via SPMI); force menu entry
+  // for phase-1 bring-up until the SPMI stack is repaired.
+  BootManagerFlag = TRUE;
   if (BootManagerFlag == FALSE) {
     return;
   }
