@@ -3,6 +3,8 @@ APRIORI DXE {
   INF MdeModulePkg/Universal/PCD/Dxe/Pcd.inf
   INF QcomPkg/Drivers/IortDtDxe/IortDtDxe.inf
 
+  INF mondrianPkg/Drivers/SpmiProbeDxe/SpmiProbeDxe.inf
+
   INF mondrianPkg/Binaries/QcomPkg/Drivers/EnvDxe/EnvDxe.inf
 
   INF MdeModulePkg/Universal/ReportStatusCodeRouter/RuntimeDxe/ReportStatusCodeRouterRuntimeDxe.inf
@@ -34,7 +36,6 @@ APRIORI DXE {
   INF mondrianPkg/Binaries/QcomPkg/Drivers/TzDxe/ScmDxeLA.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/TLMMDxe/TLMMDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/I2CDxe/I2CDxe.inf
-  INF mondrianPkg/Drivers/SpmiProbeDxe/SpmiProbeDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/SPMIDxe/SPMIDxe.inf
 
   INF MdeModulePkg/Universal/ResetSystemRuntimeDxe/ResetSystemRuntimeDxe.inf
