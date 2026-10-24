@@ -28,7 +28,7 @@ WalkCompact (
     Idx   = (Va >> (30 - 9 * (Level - 1))) & 0x1FF;
     Desc  = *(volatile UINT64 *)(Table + Idx * 8);
     if ((Desc & 1ULL) == 0) {
-      DEBUG ((DEBUG_ERROR, "[SPMIPROBE] VA=%-10llx UNMAPPED at L%d\n", (UINT64)Va, Level));
+      DEBUG ((DEBUG_ERROR, "[SPMIPROBE] VA=%-10lx UNMAPPED at L%d\n", (UINT64)Va, Level));
       return;
     }
     if ((Desc & 2ULL) == 0) {
@@ -37,7 +37,7 @@ WalkCompact (
     Table = Desc & 0x0000FFFFFFFFFFF000ULL;
   }
   if (Level == 3 && (Desc & 2ULL)) {
-    DEBUG ((DEBUG_ERROR, "[SPMIPROBE] VA=%-10llx L3 still table\n", (UINT64)Va));
+    DEBUG ((DEBUG_ERROR, "[SPMIPROBE] VA=%-10lx L3 still table\n", (UINT64)Va));
     return;
   }
   if (Level == 1) {
@@ -47,7 +47,7 @@ WalkCompact (
   } else {
     Pa = (Desc & 0x0000FFFFFFFFF000ULL) | (Va & 0xFFFULL);
   }
-  DEBUG ((DEBUG_ERROR, "[SPMIPROBE] VA=%-10llx L%d final=0x%lx AttrIdx=%-d AP=%-d SH=%-d AF=%-d nG=%-d MAIRbyte=0x%x\n",
+  DEBUG ((DEBUG_ERROR, "[SPMIPROBE] VA=%-10lx L%d final=0x%lx AttrIdx=%-d AP=%-d SH=%-d AF=%-d nG=%-d MAIRbyte=0x%x\n",
     (UINT64)Va, Level, Pa,
     (INT32)((Desc >> 6) & 3), (INT32)((Desc >> 8) & 3),
     (INT32)((Desc >> 10) & 1), (INT32)((Desc >> 11) & 1),
@@ -63,7 +63,7 @@ Read32 (
   UINT32  Value;
 
   Value = *(volatile UINT32 *)Addr;
-  DEBUG ((DEBUG_ERROR, "[SPMIPROBE] r%-10llx=0x%08x\n", (UINT64)Addr, Value));
+  DEBUG ((DEBUG_ERROR, "[SPMIPROBE] r%-10lx=0x%08x\n", (UINT64)Addr, Value));
   return Value;
 }
 
