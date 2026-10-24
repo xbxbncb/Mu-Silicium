@@ -38,7 +38,7 @@ APRIORI DXE {
 
   INF MdeModulePkg/Universal/ResetSystemRuntimeDxe/ResetSystemRuntimeDxe.inf
 
-  INF mondrianPkg/Binaries/QcomPkg/Drivers/PmicDxe/PmicDxeLa.inf
+  # EXCLUDED: INF mondrianPkg/Binaries/QcomPkg/Drivers/PmicDxe/PmicDxeLa.inf
 
   INF MdeModulePkg/Universal/Disk/DiskIoDxe/DiskIoDxe.inf
   INF MdeModulePkg/Universal/Disk/PartitionDxe/PartitionDxe.inf

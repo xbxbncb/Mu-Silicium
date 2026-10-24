@@ -34,7 +34,7 @@
   INF mondrianPkg/Binaries/QcomPkg/Drivers/HWIODxe/HWIODxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/I2CDxe/I2CDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/TLMMDxe/TLMMDxe.inf
-  INF mondrianPkg/Binaries/QcomPkg/Drivers/PmicDxe/PmicDxeLa.inf
+  # EXCLUDED: INF mondrianPkg/Binaries/QcomPkg/Drivers/PmicDxe/PmicDxeLa.inf
 
   INF MdeModulePkg/Universal/DevicePathDxe/DevicePathDxe.inf
   INF MdeModulePkg/Universal/Disk/DiskIoDxe/DiskIoDxe.inf
