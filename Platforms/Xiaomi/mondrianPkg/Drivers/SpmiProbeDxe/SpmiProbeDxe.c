@@ -19,7 +19,8 @@ WalkCompact (
   __asm__ __volatile__ ("mrs %0, ttbr0_el1" : "=r" (Ttbr0));
   __asm__ __volatile__ ("mrs %0, tcr_el1" : "=r" (Tcr));
   __asm__ __volatile__ ("mrs %0, mair_el1" : "=r" (Mair));
-  DEBUG ((DEBUG_ERROR, "[SPMIPROBE] TTBR0=%lx TCR=%lx MAIR=%lx\n", Ttbr0, Tcr, Mair));
+  DEBUG ((DEBUG_ERROR, "[SPMIPROBE] TTBR0=0x%lx TCR=0x%lx MAIR=0x%lx\n",
+    (UINT64)Ttbr0, (UINT64)Tcr, (UINT64)Mair));
 
   Desc   = 0;
   Table  = Ttbr0 & 0x0000FFFFFFFFFFF000ULL;
@@ -36,8 +37,8 @@ WalkCompact (
     }
     Table = Desc & 0x0000FFFFFFFFFFF000ULL;
   }
-  if (Level == 3 && (Desc & 2ULL)) {
-    DEBUG ((DEBUG_ERROR, "[SPMIPROBE] VA=0x%lx L3 still table\n", (UINT64)Va));
+  if (Level > 3 || (Desc & 2ULL)) {
+    DEBUG ((DEBUG_ERROR, "[SPMIPROBE] VA=0x%lx L%d still table\n", (UINT64)Va, Level));
     return;
   }
   if (Level == 1) {
@@ -47,11 +48,13 @@ WalkCompact (
   } else {
     Pa = (Desc & 0x0000FFFFFFFFF000ULL) | (Va & 0xFFFULL);
   }
-  DEBUG ((DEBUG_ERROR, "[SPMIPROBE] VA=0x%lx L%d final=0x%lx AttrIdx=%d AP=%d SH=%d AF=%d nG=%d MAIRbyte=0x%x\n",
+  DEBUG ((DEBUG_ERROR, "[SPMIPROBE] VA=0x%lx L%d PA=0x%lx AIdx=%d AP=%d SH=%d AF=%d nG=%d\n",
     (UINT64)Va, Level, Pa,
-    (INT32)((Desc >> 6) & 3), (INT32)((Desc >> 8) & 3),
-    (INT32)((Desc >> 10) & 1), (INT32)((Desc >> 11) & 1),
-    (INT32)((Mair >> (((Desc >> 2) & 7) * 8)) & 0xFF)));
+    (INT32)((Desc >> 2) & 7),
+    (INT32)((Desc >> 6) & 3),
+    (INT32)((Desc >> 8) & 3),
+    (INT32)((Desc >> 10) & 1),
+    (INT32)((Desc >> 11) & 1)));
 }
 
 STATIC
@@ -63,7 +66,7 @@ Read32 (
   UINT32  Value;
 
   Value = *(volatile UINT32 *)Addr;
-  DEBUG ((DEBUG_ERROR, "[SPMIPROBE] r0x%lx=0x%08x\n", (UINT64)Addr, Value));
+  DEBUG ((DEBUG_ERROR, "[SPMIPROBE] r0x%lx=0x%08x\n", Addr, Value));
   return Value;
 }
 
