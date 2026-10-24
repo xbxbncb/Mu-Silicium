@@ -94,6 +94,6 @@
   INF mondrianPkg/Binaries/QcomPkg/Drivers/UsbConfigDxe/UsbConfigDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/UsbInitDxe/UsbInitDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/RNGDxe/RngDxe.inf
-  INF mondrianPkg/Binaries/QcomPkg/Drivers/PILDxe/PILDxe.inf
+  # EXCLUDED: INF mondrianPkg/Binaries/QcomPkg/Drivers/PILDxe/PILDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/PILProxyDxe/PILProxyDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/SPSSDxe/SPSSDxe.inf

@@ -63,7 +63,7 @@ APRIORI DXE {
 !endif
 
   INF mondrianPkg/Binaries/QcomPkg/Drivers/PILProxyDxe/PILProxyDxe.inf
-  INF mondrianPkg/Binaries/QcomPkg/Drivers/PILDxe/PILDxe.inf
+  # EXCLUDED: INF mondrianPkg/Binaries/QcomPkg/Drivers/PILDxe/PILDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/SPSSDxe/SPSSDxe.inf
 
   INF MdeModulePkg/Universal/WatchdogTimerDxe/WatchdogTimer.inf
