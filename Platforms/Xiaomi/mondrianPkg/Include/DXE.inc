@@ -50,7 +50,7 @@
   INF mondrianPkg/Binaries/QcomPkg/Drivers/ULogDxe/ULogDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/VcsDxe/VcsDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/ClockDxe/ClockDxe.inf
-  INF mondrianPkg/Binaries/QcomPkg/Drivers/SPMIDxe/SPMIDxe.inf
+  # EXCLUDED: INF mondrianPkg/Binaries/QcomPkg/Drivers/SPMIDxe/SPMIDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/ICBDxe/ICBDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/SmemDxe/SmemDxe.inf
   INF MdeModulePkg/Universal/BdsDxe/BdsDxe.inf
@@ -75,10 +75,10 @@
 !endif
 
   INF mondrianPkg/Binaries/QcomPkg/Drivers/ButtonsDxe/ButtonsDxe.inf
-  INF mondrianPkg/Binaries/QcomPkg/Drivers/ChargerExDxe/ChargerExDxe.inf
+  # EXCLUDED: INF mondrianPkg/Binaries/QcomPkg/Drivers/ChargerExDxe/ChargerExDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/PmicGlinkDxe/PmicGlinkDxe.inf
-  INF mondrianPkg/Binaries/QcomPkg/Drivers/QcomChargerDxe/QcomChargerDxeLA.inf
-  INF mondrianPkg/Binaries/QcomPkg/Drivers/UsbPwrCtrlDxe/UsbPwrCtrlDxe.inf
+  # EXCLUDED: INF mondrianPkg/Binaries/QcomPkg/Drivers/QcomChargerDxe/QcomChargerDxeLA.inf
+  # EXCLUDED: INF mondrianPkg/Binaries/QcomPkg/Drivers/UsbPwrCtrlDxe/UsbPwrCtrlDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/TsensDxe/TsensDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/DDRInfoDxe/DDRInfoDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/UsbfnDwc3Dxe/UsbfnDwc3Dxe.inf

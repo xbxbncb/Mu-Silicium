@@ -34,7 +34,7 @@ APRIORI DXE {
   INF mondrianPkg/Binaries/QcomPkg/Drivers/TzDxe/ScmDxeLA.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/TLMMDxe/TLMMDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/I2CDxe/I2CDxe.inf
-  INF mondrianPkg/Binaries/QcomPkg/Drivers/SPMIDxe/SPMIDxe.inf
+  # EXCLUDED: INF mondrianPkg/Binaries/QcomPkg/Drivers/SPMIDxe/SPMIDxe.inf
 
   INF MdeModulePkg/Universal/ResetSystemRuntimeDxe/ResetSystemRuntimeDxe.inf
 
@@ -77,9 +77,9 @@ APRIORI DXE {
   INF MdeModulePkg/Universal/BdsDxe/BdsDxe.inf
 
   INF mondrianPkg/Binaries/QcomPkg/Drivers/PmicGlinkDxe/PmicGlinkDxe.inf
-  INF mondrianPkg/Binaries/QcomPkg/Drivers/UsbPwrCtrlDxe/UsbPwrCtrlDxe.inf
-  INF mondrianPkg/Binaries/QcomPkg/Drivers/QcomChargerDxe/QcomChargerDxeLA.inf
-  INF mondrianPkg/Binaries/QcomPkg/Drivers/ChargerExDxe/ChargerExDxe.inf
+  # EXCLUDED: INF mondrianPkg/Binaries/QcomPkg/Drivers/UsbPwrCtrlDxe/UsbPwrCtrlDxe.inf
+  # EXCLUDED: INF mondrianPkg/Binaries/QcomPkg/Drivers/QcomChargerDxe/QcomChargerDxeLA.inf
+  # EXCLUDED: INF mondrianPkg/Binaries/QcomPkg/Drivers/ChargerExDxe/ChargerExDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/UsbfnDwc3Dxe/UsbfnDwc3Dxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/XhciPciEmulationDxe/XhciPciEmulationDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/XhciDxe/XhciDxe.inf
