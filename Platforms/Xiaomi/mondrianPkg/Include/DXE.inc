@@ -50,7 +50,7 @@
   INF mondrianPkg/Binaries/QcomPkg/Drivers/ULogDxe/ULogDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/VcsDxe/VcsDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/ClockDxe/ClockDxe.inf
-  INF mondrianPkg/Drivers/SpmiProbeDxe/SpmiProbeDxe.inf
+  # EXCLUDED: INF mondrianPkg/Drivers/SpmiProbeDxe/SpmiProbeDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/SPMIDxe/SPMIDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/ICBDxe/ICBDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/SmemDxe/SmemDxe.inf
