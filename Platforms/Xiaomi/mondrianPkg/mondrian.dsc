@@ -72,4 +72,3 @@
   ConfigurationMapLib|mondrianPkg/Library/ConfigurationMapLib/ConfigurationMapLib.inf
 
 [Components]
-  mondrianPkg/Drivers/SpmiProbeDxe/SpmiProbeDxe.inf
