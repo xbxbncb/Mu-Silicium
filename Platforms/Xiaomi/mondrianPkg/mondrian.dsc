@@ -72,3 +72,4 @@
   ConfigurationMapLib|mondrianPkg/Library/ConfigurationMapLib/ConfigurationMapLib.inf
 
 [Components]
+  mondrianPkg/Drivers/PmicProtocolStubDxe/PmicProtocolStubDxe.inf
