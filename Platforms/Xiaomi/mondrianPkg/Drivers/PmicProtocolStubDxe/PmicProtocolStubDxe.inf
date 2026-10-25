@@ -17,8 +17,5 @@
   UefiBootServicesTableLib
   DebugLib
 
-[Protocols]
-  gPmicProtocolStubGuid|ae37b942-457f-4c91-a196-d9669fd347a3
-
 [Depex]
   TRUE
