@@ -1,0 +1,24 @@
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = PmicProtocolStubDxe
+  FILE_GUID                      = 7C3A1F2E-8B4D-4C5A-9E6F-1D2C3B4A5F6E
+  MODULE_TYPE                    = DXE_DRIVER
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = PmicProtocolStubDxeEntryPoint
+
+[Sources]
+  PmicProtocolStubDxe.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiDriverEntryPoint
+  UefiBootServicesTableLib
+  DebugLib
+
+[Protocols]
+  gPmicProtocolStubGuid
+
+[Depex]
+  TRUE
