@@ -50,8 +50,6 @@
   INF mondrianPkg/Binaries/QcomPkg/Drivers/ULogDxe/ULogDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/VcsDxe/VcsDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/ClockDxe/ClockDxe.inf
-  INF mondrianPkg/Drivers/PmicProtocolStubDxe/PmicProtocolStubDxe.inf
-  INF mondrianPkg/Binaries/QcomPkg/Drivers/PmicDxe/PmicDxeLa.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/ICBDxe/ICBDxe.inf
   INF mondrianPkg/Binaries/QcomPkg/Drivers/SmemDxe/SmemDxe.inf
   INF MdeModulePkg/Universal/BdsDxe/BdsDxe.inf
